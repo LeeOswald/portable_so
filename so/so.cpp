@@ -1,5 +1,6 @@
 #include "so.h"
 
+#include <cassert>
 #include <iostream>
 #include <sstream>
 #include <unordered_set>
@@ -31,6 +32,7 @@ AStruct::AStruct(std::string_view name, std::string_view readable, Formatter&& f
     , m_readable(readable)
     , m_formatter(std::move(formatter))
 {
+    assert((reinterpret_cast<std::uintptr_t>(this) & 0x0f) == 0);
     g_set.insert(this);
 }
 
