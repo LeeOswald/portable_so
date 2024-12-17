@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/exe/console",
+            "program": "${workspaceFolder}/build/bin/console",
             "args": [ ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
